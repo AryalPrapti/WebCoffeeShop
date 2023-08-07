@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop || home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <!-- <link rel="stylesheet" href="css/b.css"> -->
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" th:href="@{/css/responsive.css}">
+
+  <link rel="stylesheet" th:href="@{/css/styles.css?v=1.0}">
+
+  <!-- use for box icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+
+<!---HEADER SECTION STARTS-->
+<header class="header">
+  <div th:replace="~{fragments/header.html :: header-area}"></div>
+</header>
+<!-----header section ends-->
+
+
+<!---HOME SECTION STARTS-->
+<section class="home-section" id="home-section">
+  <video class="video-slide active" th:src="@{/video/first-slide.mp4}" autoplay muted loop></video>
+
+  <div class="content-abt active">
+    <h3>
+      from our plantation to your cup!
+    </h3>
+    <p>
+      We’re the Coffee Bean and we’ve been roasting and serving organic
+      coffee here in Toronto since 1981. We believe in only sourcing ethically
+      farmed beans, roasting them in house, and serving fresh coffee to our customers
+      at a fair price.
+    </p>
+    <a href="#" class="btn">get yours now</a>
+  </div>
+
+  <div class="content-abt">
+    <h3>
+      from our plantation to your cup!
+    </h3>
+    <p>
+      We’re the Coffee Bean and we’ve been roasting and serving organic
+      coffee here in Toronto since 1981. We believe in only sourcing ethically
+      farmed beans, roasting them in house, and serving fresh coffee to our customers
+      at a fair price.
+    </p>
+    <a href="#" class="btn">get yours now</a>
+  </div>
+
+  <div class="content-abt">
+    <h3>
+      from our plantation to your cup!
+    </h3>
+    <p>
+      We’re the Coffee Bean and we’ve been roasting and serving organic
+      coffee here in Toronto since 1981. We believe in only sourcing ethically
+      farmed beans, roasting them in house, and serving fresh coffee to our customers
+      at a fair price.
+    </p>
+    <a href="#" class="btn">get yours now</a>
+  </div>
+
+  <div class="content-abt">
+    <h3>
+      from our plantation to your cup!
+    </h3>
+    <p>
+      We’re the Coffee Bean and we’ve been roasting and serving organic
+      coffee here in Toronto since 1981. We believe in only sourcing ethically
+      farmed beans, roasting them in house, and serving fresh coffee to our customers
+      at a fair price.
+    </p>
+    <a href="#" class="btn">get yours now</a>
+  </div>
+
+  <!-- <div class="slider-navigation">
+    <div class="nav-btn active"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+  </div> -->
+
+</section>
+
+<!-----home section ends here-->
+
+<!-- row cofee build section -->
+<div class="coffee-build">
+  <div class="section-heading text-center">
+    <h2 class="section-main-heading">coffee build your base</h2>
+  </div>
+  <div class="section-grid-banner">
+    <!-- first column starts -->
+    <div class="section-additional-grids three-items">
+
+      <div class="section-support-left-blocks">
+        <div class="section-support-content">
+          <h6 class="section-support-heading">croissant</h6>
+          <p class="section-support-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque accusamus eaque animi repellendus            </p>
+        </div>
+        <div class="section-support-icon-image">
+          <img th:src="@{/img/1.png}" alt="">
+        </div>
+      </div>
+
+      <div class="section-support-left-blocks">
+        <div class="section-support-content">
+          <h6 class="section-support-heading">croissant</h6>
+          <p class="section-support-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque accusamus eaque animi repellendus            </p>
+        </div>
+        <div class="section-support-icon-image">
+          <img th:src="@{/img/2.png}" alt="">
+        </div>
+      </div>
+
+      <div class="section-support-left-blocks">
+        <div class="section-support-content">
+          <h6 class="section-support-heading">croissant</h6>
+          <p class="section-support-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque accusamus eaque animi repellendus
+
+          </p>
+        </div>
+        <div class="section-support-icon-image">
+          <img th:src="@{/img/3.png}" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- first column end -->
+
+
+    <!-- second column starts -->
+    <div class="section-main-grids sectin-column">
+      <div class="section-grid-image">
+        <img th:src="@{/img/coffee-build-banner.webp}" alt="">
+      </div>
+    </div>
+    <!-- second column end -->
+
+    <!-- third column starts -->
+    <div class="section-additional-grids three-items">
+
+      <div class="section-support-blocks">
+        <div class="section-support-right-icon-image">
+          <img th:src="@{/img/4.png}" alt="">
+        </div>
+        <div class="section-support-right-content">
+          <h6 class="section-support-heading">croissant</h6>
+          <p class="section-support-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque accusamus eaque animi repellendus            </p>
+        </div>
+      </div>
+
+      <div class="section-support-blocks">
+        <div class="section-support-right-icon-image">
+          <img th:src="@{/img/5.png}" alt="">
+        </div>
+        <div class="section-support-right-content">
+          <h6 class="section-support-heading">croissant</h6>
+          <p class="section-support-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque accusamus eaque animi repellendus            </p>
+        </div>
+      </div>
+
+      <div class="section-support-blocks">
+        <div class="section-support-right-icon-image">
+          <img th:src="@{/img/6.png}" alt="">
+        </div>
+        <div class="section-support-right-content">
+          <h6 class="section-support-heading">croissant</h6>
+          <p class="section-support-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque accusamus eaque animi repellendus            </p>
+        </div>
+      </div>  `
+    </div>
+    <!-- third column end -->
+  </div>
+
+</div>
+
+
+<!----ABOUT SECTION STARTS-->
+<section class="about-section" id="about-section">
+  <h1 class="heading">about us </h1>
+  <div class="row">
+    <div class="image-sec">
+      <img th:src="@{/img/coffee-special.jpg}"  alt="about-image">
+    </div>
+
+    <div class="content-sec">
+      <h2 class="coffee-special">what makes our coffee special ?</h2>
+      <div class="first-point">
+        <div class="image-icon-section">
+          <img th:src="@{/img/7.png}" alt="">
+        </div>
+        <div class="section-description">
+          <h2>pure ingridients</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit
+          </p>
+        </div>
+      </div>
+
+      <div class="first-point">
+        <div class="image-icon-section">
+          <img th:src="@{/img/8.png}" alt="">
+        </div>
+        <div class="section-description">
+          <h2>sustainability</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit
+          </p>
+        </div>
+      </div>
+
+      <div class="first-point">
+        <div class="image-icon-section">
+          <img th:src="@{/img/9.png}" alt="">
+        </div>
+        <div class="section-description">
+          <h2>enviromentalism</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit
+          </p>
+        </div>
+      </div>
+
+      <div class="first-point">
+        <div class="image-icon-section">
+          <img th:src="@{/img/10.png}" alt="">
+        </div>
+        <div class="section-description">
+          <h2>formula transparency</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- about section ends here -->
+
+
+<!-- story section starts -->
+<div class="story">
+  <p class="theory">e = m c<sup>2</sup></p>
+  <p>energy = milk * coffee<sup>2</sup></p>
+  <p class="discount">flat  20% discount</p>
+</div>
+
+
+<!-- UPCOMING PRODUCTS STARTS-->
+<section class="product-section">
+  <h1 class="heading">
+    upcoming products
+  </h1>
+  <!--  UPCOMING ITEMS -->
+  <div class="trending-containers">
+
+    <div class="small-box" th:each="newProduct:${newProducts}">
+      <div class="image">
+          <img class="Product-Image" th:src="'data:image/png;base64,'+${newProduct.product_image}" alt="">
+      </div>
+      <div class="content">
+        <h3> <a th:href="@{~/product/}+${newProduct.id}" th:text="${newProduct.product_name}"></a></h3>
+        <div class="review-star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="product-price">
+          <span th:text=" 'Rs.' + ${newProduct.product_price}"></span>
+        </div>
+
+        <a th:href="@{~/cart/add/}+${newProduct.id}">
+          <button class="add-cart">add to cart</button>
+        </a>
+
+      </div>
+    </div>
+
+
+<!--    <div class="small-box" th:each="products:${product}">-->
+<!--      <div class="image">-->
+<!--        <a th:href="@{~/product/}+${newProduct.id}">-->
+<!--          <img class="Product-Image" th:src="'data:image/png;base64,'+${product.product_imageBase64}" alt="">-->
+<!--        </a>-->
+<!--      </div>-->
+<!--      <div class="content">-->
+<!--        <h3><a th:href="@{~/product/}+${newProduct.id}" th:text="${newProduct.product_name}"></a></h3>-->
+<!--        <div class="review-star">-->
+<!--          <i class="fas fa-star"></i>-->
+<!--          <i class="fas fa-star"></i>-->
+<!--          <i class="fas fa-star"></i>-->
+<!--          <i class="fas fa-star"></i>-->
+<!--          <i class="fas fa-star-half-alt"></i>-->
+<!--        </div>-->
+<!--        <div class="product-price">-->
+<!--          <span> <a th:href="@{~/product/}+${newProduct.id}" th:text=" 'Rs.' + ${newProduct.product_price}"></a></span>-->
+<!--        </div>-->
+<!--        <form th:method="post" th:action="@{/cart/add}" th:object="${cartItems}">-->
+<!--          <input type="text" hidden="hidden" th:field="*{id}" >-->
+<!--          <input type="text" hidden="hidden" th:text="">-->
+<!--          <button type="submit" class="add-cart">add to cart</button>-->
+
+<!--        </form>-->
+<!--&lt;!&ndash;        <a th:href="@{~/q/addCart/}+${newProduct.id}">&ndash;&gt;-->
+<!--&lt;!&ndash;        </a>&ndash;&gt;-->
+<!--      </div>-->
+<!--    </div>-->
+
+  </div>
+</section>
+
+</body>
+
+<script>
+  const form1 = document.getElementsByClassName("form1");
+
+  // FOR VALIDATION
+
+  const password = document.getElementsByClassName("password");
+  const confirm_password = document.getElementsByClassName("confirm Password");
+
+  form1.addEventListener("submit", (e) => {
+    if (password.value !== confirm_password.value ) {
+      alert("password do not match!");
+      e.preventDefault();
+    }
+  });
+
+  const email = document.getElementsByClassName("email");
+  const phone = document.getElementsByClassName("phone-num");
+
+  email.addEventListener("invalid", (e) => {
+    e.target.setCustomValidity("please enter a valid email address")
+  });
+
+  email.addEventListener("input", (e) => {
+    e.target.setCustomValidity("");
+  });
+
+  phone.addEventListener("invalid", (e) => {
+    e.target.setCustomValidity("please enter a valid phone number")
+  });
+
+  phone.addEventListener("input", (e) => {
+    e.target.setCustomValidity("");
+  })
+
+  password.addEventListener("invalid", (e) => {
+    e.target.setCustomValidity("Please enter a password");
+  });
+
+  password.addEventListener("input", (e) => {
+    e.target.setCustomValidity("");
+  });
+
+  confirm_password.addEventListener("invalid", (e) => {
+    e.target.setCustomValidity("Passwords do not match");
+  });
+
+  confirm_password.addEventListener("input", (e) => {
+    e.target.setCustomValidity("");
+  });
+</script>
+
+<!---- javascript file link-->
+<script th:src="@{/js/js.js}"></script>
+</html>

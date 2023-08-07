@@ -1,0 +1,104 @@
+
+<div class="header-area" th:fragment="header-area">
+<a href="#" class="logo">
+  <img th:src="@{/img/logo.png}" alt="coffee-logo">
+</a>
+
+<nav class="navbar">
+  <a th:href="@{~/dashboard}">home</a>
+  <a th:href="@{~/about}">about</a>
+  <a th:href="@{~/shop}">shop</a>
+  <a th:href="@{~/contact}">contact</a>
+  <a th:href="@{~/blog}">blogs</a>
+</nav>
+
+<div class="icons">
+  <div class="fas fa-search" id="search-icon"></div>
+  <a th:href="@{~/viewCart}" >
+    <div class="fas fa-shopping-cart" id="shopping-cart-icon"></div>
+  </a>
+
+<!--  30/01/2023  -->
+  <div th:if="${users != null}" class="users-name">
+    <nav class="user-menu">
+      <p th:text="${users.fullName}"></p>
+      <ul>
+        <li><a th:href="@{/list/}+${users.id}">My Profile</a></li>
+        <li><a href="/settings">Settings</a></li>
+        <li><a th:href="@{~/logout}">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div th:if="${users == null}">
+    <a th:href="@{/login}" class="nav-login-btn">Login</a>
+  </div>
+
+<!--  <div th:if="${user != null}" class="dropdown">-->
+<!--    <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--      <img th:src="${user.image}" alt="User Image" class="img-circle" width="25" height="25"/> <span th:text="${user.fullName}"></span>-->
+<!--    </a>-->
+<!--    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">-->
+<!--      <a class="dropdown-item" href="/profile">Profile</a>-->
+<!--      <a class="dropdown-item" href="/logout">Logout</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div th:if="${user == null}">-->
+<!--    <a href="/login">Login</a>-->
+<!--  </div>-->
+<!--   ............................................-->
+
+
+  <div class="fas fa-bars" id="menu-icon"></div>
+</div>
+
+<div class="search-form">
+  <input type="search" id="search-box" placeholder="Search">
+  <label for="search-box" class="fas fa-search"></label>
+</div>
+
+
+<!--<div class="cart-container">-->
+
+<!--  &lt;!&ndash; <div class="items">-->
+<!--      <span class="fas fa-times"></span>-->
+<!--      <img src="../image/cart-item-2.png" alt="">-->
+<!--    <div class="content">-->
+<!--      <h3 class="cart-product-title">cart item 02</h3>-->
+<!--      <div class="price">Rs.100<span class="discount-price"> 35.0</span></div>-->
+<!--      <input type="number" value="1" class="items-quantity">-->
+<!--    </div>-->
+<!--  </div> &ndash;&gt;-->
+
+<!--  &lt;!&ndash; <div class="items">-->
+<!--    <span class="fas fa-times"></span>-->
+<!--    <img src="../image/cart-item-3.png" alt="">-->
+<!--    <div class="content">-->
+<!--      <h3 class="cart-product-title">cart item 03</h3>-->
+<!--      <div class="price">Rs.10.0</div>-->
+<!--      <input type="number" value="1" class="items-quantity">-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="items">-->
+<!--    <span class="fas fa-times"></span>-->
+<!--    <img src="../image/cart-item-4.png" alt="">-->
+<!--    <div class="content">-->
+<!--      <h3 class="cart-product-title">cart item 04</h3>-->
+<!--      <div class="price">Rs.10.0</div>-->
+<!--      <input type="number" value="1" class="items-quantity">-->
+<!--    </div>-->
+<!--  </div> &ndash;&gt;-->
+
+<!--  <div class="total-amount">-->
+<!--    <div class="total-title">total</div>-->
+<!--    <div class="total-price">Rs.0</div>-->
+<!--  </div>-->
+
+<!--  <a href="#">-->
+<!--    <button class="btn">Checkout Now</button>-->
+<!--  </a>-->
+
+<!--</div>-->
+
+</div>

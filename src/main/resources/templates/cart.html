@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/responsive.css}">
+
+    <link rel="stylesheet" th:href="@{/css/styles.css?v=1.0}">
+    <!-- use for box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+<body>
+<!---HEADER SECTION STARTS-->
+<header class="header">
+    <div th:replace="~{fragments/header.html :: header-area}"></div>
+</header>
+<!-----header section ends-->
+
+<!-- cart home section starts -->
+<section class="cart-home-section">
+    <img src="../image/for-productPage.jpg" alt="">
+</section>
+
+<!-- cart home section ends -->
+
+<div class="cart-main-section">
+    <form action="">
+        <table>
+            <thead>
+            <tr>
+                <th class="cart-product-img">Image</th>
+                <th class="cart-product-name">Product</th>
+                <th class="cart-product-price">Price</th>
+                <th class="cart-product-quantity">Quantity</th>
+                <th class="cart-product-subtotal">Total</th>
+                <th class="cart-product-remove">Remove</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="cartProduct:${cartItems}">
+                <td class="cart-product-img"><img th:src="'data:image/png;base64,'+${cartProduct.product.product_image}" alt="" /></a></td>
+                <td class="cart-product-name"><a th:href="@{~/product/}+${cartProduct.id}" th:text="${cartProduct.product.product_name}"></a></td>
+                <td class="cart-product-price"><span class="amount" th:text="'Rs.'+${cartProduct.product.product_price}"></span></td>
+                <td class="cart-product-quantity">
+                    <form></form>
+<!--                    <form th:method="post" th:action="@{~/cart/updateQuantity/}+${cartProuduct.id}"  th:if="${cartProduct.product.product_quantity}>0">-->
+<!--                        <input type='number' min="1" th:max="${cartProduct.product_quantity}" name='quantity' th:value='${cartProduct.quantity}'/>-->
+<!--                    </form>-->
+                    <span th:if="${cartProduct.quantity}==0">Out of Stock</span>
+                </td>
+                <td class="cart-product-subtotal" th:text="'Rs.'+${cartProduct.product.product_price}*${cartProduct.product.product_price}+'/-'"></td>
+                <td class="cart-product-remove"><a th:href="@{~/cart/remove/}+${cartProduct.id}"><i class="fa fa-times"></i></a></td>
+            </tr>
+            <tr th:if="${cartItems.isEmpty()}">
+                <td colspan="6">Your cart is empty!</td>
+            </tr>
+            </tbody>
+        </table>
+        <div>
+            <a th:href="@{/dashboard}">Continue Shopping</a>
+        </div>
+    </form>
+    <div>
+        <a th:href="@{~/checkout}" >Proceed to Checkout</a>
+    </div>
+</div>
+
+<!--footer areaa starts-->
+<footer class="text-center text-lg-start bg-light text-muted">
+<!--    <div th:replace="~{fragments/footer.html :: footer-area}"></div>-->
+</footer>
+
+<!--footer area ends -->
+
+</body>
+</html>

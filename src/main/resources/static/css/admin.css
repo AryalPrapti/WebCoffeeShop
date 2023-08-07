@@ -1,0 +1,371 @@
+
+/*.admin-nav .admin-header {*/
+/*    background-color: #562d13;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 7px 35px;*/
+/*}*/
+
+/*.admin-frag {*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.admin-header img {*/
+/*    height: 6rem;*/
+/*}*/
+
+/*input[type="text"] {*/
+/*    padding: 12px 15px;*/
+/*    border-radius: 7px;*/
+/*    border: 1px solid #ccc;*/
+/*    margin-right: 10px;*/
+/*    color: black;*/
+/*    width: 300px;*/
+/*}*/
+
+/*.admin-header input:active {*/
+/*    width: 320px;*/
+/*}*/
+
+/*.admin-nav .nav-container {*/
+/*    background-color: #c29763;*/
+/*    height: 90vh;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.nav-container .inner-container {*/
+/*    padding-top: 25px;*/
+/*    width: 245px;*/
+/*}*/
+
+/*.nav-container a {*/
+/*    display: block;*/
+/*    margin-bottom: 30px;*/
+/*    padding: 8px 14px;*/
+/*    color: black;*/
+/*    font-size: 18px;*/
+/*}*/
+
+/*.nav-container a:hover {*/
+/*    background-color: #562d13;*/
+/*    width: 231px;*/
+/*    border-radius: 20px;*/
+/*    color: white;*/
+/*}*/
+
+/*.nav-container .fa-users,*/
+/*.nav-container .fa-shop {*/
+/*    font-size: 20px;*/
+/*}*/
+
+/*.nav-container .fa-plus {*/
+/*    font-size: 28px;*/
+/*}*/
+
+/*.nav-container i {*/
+/*    margin-right: 20px;*/
+/*    font-size: 25px;*/
+/*    vertical-align: middle;*/
+/*    margin-left: 25px;*/
+/*    margin-bottom: 3px;*/
+/*}*/
+
+/*.nav-container .nav-menu {*/
+/*    margin: auto;*/
+/*}*/
+
+
+.admin-header .admin-frag {
+    background-color: #175613;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 35px;
+}
+
+.admin-header img {
+    height: 4rem;
+}
+
+input[type="text"] {
+    padding: 12px 15px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    color: black;
+    width: 300px;
+}
+
+.admin-header input:active {
+    width: 320px;
+}
+
+.admin-left-side {
+    display: inline;
+}
+
+.admin-left-side .nav-container {
+    background-color: #84c080;
+    height: 90vh;
+    display: inline-block;
+}
+
+.nav-container .inner-container {
+    padding-top: 25px;
+    width: 260px;
+}
+
+.nav-container a {
+    display: block;
+    margin-bottom: 30px;
+    padding: 8px 14px;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-container a:hover {
+    background-color: #562d13;
+    width: 231px;
+    border-radius: 20px;
+    color: white;
+}
+
+.nav-container .fa-users,
+.nav-container .fa-shop {
+    font-size: 20px;
+}
+
+.nav-container .fa-plus {
+    font-size: 28px;
+}
+
+.nav-container i {
+    margin-right: 20px;
+    font-size: 25px;
+    vertical-align: middle;
+    margin-left: 25px;
+    margin-bottom: 3px;
+}
+
+.nav-container .nav-menu {
+    margin: auto;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile .logo {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name {
+    font-weight: bold;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.name i {
+    margin-left: 5px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    z-index: 1;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    font-size: 16px;
+}
+
+.dropdown li {
+    margin-bottom: 5px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #333;
+}
+
+.name:hover + .dropdown,
+.dropdown:hover {
+    display: block;
+}
+
+
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile .logo {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name {
+    font-weight: bold;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.name i {
+    margin-left: 5px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    z-index: 1;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    font-size: 16px;
+}
+
+.dropdown li {
+    margin-bottom: 5px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #333;
+}
+
+.name:hover + .dropdown,
+.dropdown:hover {
+    display: block;
+}
+
+/* PRODUCT LIST PAGE CSS */
+.admin-body {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 100px;
+    /* top: 10%; */
+    margin-top: 50px;
+    width: 65%;
+}
+
+.admin-body .admin-product-list tr th {
+    padding: 20px 40px;
+    font-size: 17px;
+
+}
+
+.admin-body .admin-product-list tr td {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.admin-body .admin-product-list tr td img {
+    width: 60px;
+    height: 60px;
+}
+
+.admin-body .admin-product-list tbody tr td a.remove {
+    padding: 4px 9px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.admin-body .admin-product-list tbody tr td a.edit {
+    padding: 4px 9px;
+    background-color: rgba(255, 255, 0, 0.772);
+    color: black;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.admin-body .admin-product-list {
+    overflow-x: scroll;
+}
+/*.......................................*/
+
+
+/* ADD PRODUCT PAGE CSS*/
+.admin-add-product {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.admin-add-product .add-product-container {
+    width: 455px;
+    height: 483px;
+    border: 1px solid white;
+    box-shadow: 0px 10px 20px 5px rgba(62, 62, 62, 0.4);
+}
+
+.admin-add-product .add-product-container label {
+    font-size: 14px;
+    color: rgb(28, 28, 28);
+    display: block;
+    padding-bottom: 8px;
+}
+
+.add-product-container .form-group {
+    display: block;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.add-product-container .form-group input {
+    margin: auto;
+}
+/*....................................................*/
+
+
+/* USER LIST PAGE CSS */
+.admin-customer-list {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.admin-customer-list .user-list-table {
+    overflow-x: scroll;
+}
+
+.admin-customer-list .user-list-table thead th {
+    padding: 15px 45px;
+    font-size: 17px;
+}
+
+.admin-customer-list .user-list-table tbody td {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+}

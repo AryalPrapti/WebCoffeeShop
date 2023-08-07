@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>products</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+	<!-- <link rel="stylesheet" href="css/b.css"> -->
+	<link rel="stylesheet" th:href="@{/css/header.css}">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="stylesheet" th:href="@{/css/responsive.css}">
+
+	<link rel="stylesheet" th:href="@{/css/styles.css?v=1.0}">
+
+	<!-- use for box icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+	<!---- javascript file link-->
+	<script src="../js/js.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+<!---HEADER SECTION STARTS-->
+<header class="header">
+	<div th:replace="~{fragments/header.html :: header-area}"></div>
+</header>
+<!-----header section ends-->
+
+
+<!-- checkout home section starts -->
+<section class="checkout-home-section">
+	<img th:src="@{/img/for-productPage.jpg}" alt="">
+</section>
+
+<!-- checkout home section ends -->
+
+
+
+<!-- CHECKOUT SECTION STARTS HERE -->
+<div class="checkout-main-container">
+	<div class="checkout-section">
+		<h1>billing address</h1>
+		<div class="first-last">
+			<div class="checkout-form-group firstname">
+				<label for="first-name">first name</label>
+				<input class="checkout-first-name" type="text" id="first-name" placeholder="first name" required>
+			</div>
+			<div class="checkout-form-group">
+				<label id="label-last" for="last-name">last name</label>
+				<input class="checkout-last-name" type="text" id="last-name" placeholder="first name" required>
+			</div>
+		</div>
+		<div class="checkout-form-group1">
+			<label id="label-user" for="user-name">username</label>
+			<input class="checkout-user-name" type="text" id="user-name" placeholder="enter username" required>
+		</div>
+		<div class="checkout-form-group1">
+			<label id="label-email" for="email">email (optional)</label>
+			<input class="checkout-email" type="text" id="email" placeholder="yours@gmail.com" required>
+		</div>
+		<div class="checkout-form-group1">
+			<label id="label-per" for="per-address">permanent address</label>
+			<input class="checkout-permanent" type="text" id="per-address" placeholder="permanent address" required>
+		</div>
+		<div class="checkout-form-group1">
+			<label id="label-temp" for="temp-address">temporary address</label>
+			<input class="checkout-temporary" type="text" id="temp-address" placeholder="temporary addres" required>
+		</div>
+
+		<div class="country-zip">
+			<div class="checkout-form-group countryname">
+				<label for="country">country</label>
+				<input class="checkout-country" type="text" id="country" placeholder="nepal" required>
+			</div>
+			<div class="checkout-form-group">
+				<label id="label-zip" for="zip">zip code</label>
+				<input class="checkout-zip" type="text" id="zip" placeholder="enter zip code" required>
+			</div>
+		</div>
+	</div>
+
+	<div class="order-summery">
+		<div class="cart-container">
+			<h1>order summery</h1>
+
+			<div class="items">
+				<img src="../image/cart-item-2.png" alt="">
+				<div class="content">
+					<h3 class="cart-product-title">cart item 02</h3>
+					<!-- <div class="price">Rs.100<span class="discount-price"> 35.0</span></div>
+                    <input type="number" value="1" class="items-quantity"> -->
+					<p class="product-desc">Lorem ipsum dolor sit</p>
+				</div>
+				<div class="checkout-price">Rs.100</div>
+			</div>
+
+
+
+
+			<!-- second items -->
+			<div class="items">
+				<img src="../image/cart-item-2.png" alt="">
+				<div class="content">
+					<h3 class="cart-product-title">cart item 02</h3>
+					<!-- <div class="price">Rs.100<span class="discount-price"> 35.0</span></div>
+                    <input type="number" value="1" class="items-quantity"> -->
+					<p class="product-desc">Lorem ipsum dolor sit</p>
+				</div>
+				<div class="checkout-price">Rs.100</div>
+			</div>
+
+			<!-- third items -->
+			<div class="items">
+				<img src="../image/cart-item-2.png" alt="">
+				<div class="content">
+					<h3 class="cart-product-title">cart item 02</h3>
+					<!-- <div class="price">Rs.100<span class="discount-price"> 35.0</span></div>
+                    <input type="number" value="1" class="items-quantity"> -->
+					<p class="product-desc">Lorem ipsum dolor sit</p>
+				</div>
+				<div class="checkout-price">Rs.100</div>
+			</div>
+
+
+			<!-- totoal amount -->
+
+			<div class="total-amount">
+				<div class="total-title">total</div>
+				<div class="total-price">Rs.0</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

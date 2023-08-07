@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop||login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <!-- <link rel="stylesheet" href="css/b.css"> -->
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" th:href="@{/css/responsive.css}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+
+<!---HEADER SECTION STARTS-->
+<header class="header">
+  <div th:replace="~{fragments/header.html :: header-area}"></div>
+</header>
+<!-----header section ends-->
+
+
+<!-- LOGIN AND REGISTRATION SECTION STARTS -->
+
+<div class="container">
+  <div class="form">
+<!--    <div class="closebtn">-->
+<!--      <button type="button" id="close">&times;</button>-->
+<!--    </div>-->
+    <div class="buttons">
+      <button type="button" class="actionbtn SignUp">SignUp</button>
+      <button type="button" class="actionbtn Login">SignIn</button>
+      <button type="button" class="move">SignUp</button>
+    </div>
+    <!-- for sign up form -->
+    <form th:method="post" th:action="@{/save}" th:object="${user}" class="form1 signup-form signup-js" >
+      <div class="formGroup">
+        <input type="text" id="username" name="fullName" placeholder="Enter your name" autocomplete="off" th:field="*{fullName}" th:value="${user.fullName}">
+        <!-- <i class="uil uil-user"></i> -->
+      </div>
+      <div class="formGroup">
+        <input type="email" name="email" class="email" placeholder="Enter your email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required autocomplete="off" th:field="*{email}" th:value="${user.email}" >
+        <!-- <i class="uil uil-envelope icon"></i> -->
+      </div>
+      <div class="formGroup">
+        <input type="tel" name="phone" class="phone-num" placeholder="Phone No" pattern="98[0-9]{8}" required autocomplete="off" th:field="*{phone}" th:value="${user.phone}">
+      </div>
+      <div class="formGroup">
+
+        <input type="password" class="password"  name="password" placeholder="Password" required autocomplete="off" th:field="*{password}" th:value="${user.password}">
+        <!-- <i class="uil uil-lock icon"></i> -->
+      </div>
+      <div class="formGroup">
+        <input type="password" id="confirm Password" placeholder="Confirm Password" required autocomplete="off">
+        <!-- <i class="uil uil-lock icon"></i>
+        <i class="uil uil-eye-slash showHidePw"></i> -->
+      </div>
+      <div class="upload_img">
+        <input type="file" id="file" th:field="*{image}">
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="checkbox" id="checkbox1">
+        <label for="checkbox1" class="text">I agree with the term and conditions</label>
+      </div>
+      <div class="formGroup">
+        <button type="submit" class="register-button">SIGNUP</button>
+      </div>
+    </form>
+
+    <!-- for login page  -->
+    <form th:action="@{/login}" th:method="post" class="form1 signin-js" >
+      <h1 class="welcome">start your day with some coffee!</h1>
+      <div class="formGroup">
+        <input type="email" name="email" placeholder="Enter your email" required autocomplete="off">
+        <!-- <i class="uil uil-envelope icon"></i> -->
+      </div>
+      <div class="formGroup">
+        <input type="password" name="password" class="password" placeholder="Enter your Password" required autocomplete="off">
+        <!-- <i class="uil uil-lock icon"></i>
+        <i class="uil uil-eye-slash showHidePw"></i> -->
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="checkbox" id="checkbox2">
+        <label for="checkbox2" class="text">Keep me signed in on this device</label>
+      </div>
+      <div class="formGroup">
+        <a th:href="@{~/forgot}">forgot password?</a>
+      </div>
+      <div class="formGroup">
+        <button type="submit" class="login-button" onclick="validateForm()">LOGIN</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- login section ends here! -->
+
+
+</body>
+<!---- javascript file link-->
+<script th:src="@{/js/js.js}"></script>
+<script th:src="@{/js/userProfile.js}"></script>
+
+<script>
+  function validateForm() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    if (email == "" || password == "") {
+      alert("Email and password must be filled out");
+      return false;
+    }
+    return true;
+  }
+</script>
+</html>

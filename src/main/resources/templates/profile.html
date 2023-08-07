@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <!-- use for box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<!--<div class="container">-->
+<!--    <form  th:action="@{/update}" th:object="${update}" th:method="post">-->
+<!--        <div class="profile-left-section">-->
+<!--            <h1>Profile Page</h1>-->
+
+<!--            <input th:value="${userdata.id}" >-->
+
+<!--            <label >Full Name:</label>-->
+<!--            <p th:text="${userdata.fullName}"></p>-->
+
+<!--            <label for="email">Email:</label>-->
+<!--            <input th:value="${userdata.email}"  type="email" id="email" name="email">-->
+
+<!--            <label for="phone">Phone Number:</label>-->
+<!--            <input  th:value="${userdata.phone}" type="tel" id="phone" name="phone">-->
+<!--            <a >-->
+<!--                <input type="submit" value="Edit">-->
+<!--            </a>-->
+<!--        </div>-->
+<!--        <div class="profile-right-section">-->
+<!--            <img src="https://via.placeholder.com/200x200" alt="Profile Picture" class="profile-pic">-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</div>-->
+
+<div class="profile-container">
+    <form th:action="@{/update}" th:object="${update}" th:method="post">
+        <div class="profile-left-section">
+            <h1>Profile Page</h1>
+<!--            <input th:value="${userdata.id}" >-->
+
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" th:value="${userdata.fullName}" style="pointer-events: none">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" th:value="${userdata.email}" style="pointer-events: none">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" th:value="${userdata.phone}" style="pointer-events: none">
+
+            <button type="submit" class="profile-logout">logout</button>
+            <button type="submit" class="profile-edit">edit</button>
+        </div>
+        <div class="profile-right-section">
+            <img src="https://via.placeholder.com/200x200" alt="Profile Picture" class="profile-pic">
+        </div>
+    </form>
+</div>
+
+<!--footer areaa starts-->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <div th:replace="~{fragments/footer.html :: footer-area}"></div>
+</footer>
+
+<!--footer area ends -->
+
+</body>
+</html>

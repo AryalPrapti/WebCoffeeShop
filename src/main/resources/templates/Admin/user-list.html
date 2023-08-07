@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Detials</title>
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+<!--header and nav section-->
+<header class="admin-header">
+    <div class="admin-frag" th:replace="~{fragments/admin-header.html :: admin-frag}"></div>
+</header>
+<!-- header and nav section end here -->
+
+<!-- admin left side section-->
+<div class="admin-left-side">
+    <div class="nav-container" th:replace="~{fragments/admin-left-side.html :: nav-container}"></div>
+</div>
+<!-- admin left side section end -->
+
+    <div class="admin-customer-list">
+        <div class="user-list-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Image</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user:${userList}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.fullName}"></td>
+                    <td th:text="${user.email}"></td>
+                    <td th:text="${user.phone}"></td>
+                    <td th:text="${user.image}"></td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+

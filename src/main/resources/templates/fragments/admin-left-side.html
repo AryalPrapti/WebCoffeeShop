@@ -1,0 +1,10 @@
+<div class="nav-container" th:fragment="nav-container">
+  <div class="inner-container">
+    <a href="#" class="dashboard"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+    <a th:href="@{~/admin/userDetails}"><i class="fa-solid fa-users"></i>customer</a>
+    <a th:href="@{~/admin/productDetails}"><i class="fa-solid fa-list"></i>products</a>
+    <a th:href="@{~/admin/addProduct}"><i class="fa-sharp fa-solid fa-plus"></i>add product</a>
+    <a href="#"><i class="fa-sharp fa-solid fa-shop"></i>order</a>
+    <a th:href="@{~/logout}">logout</a>
+  </div>
+</div>
